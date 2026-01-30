@@ -42,20 +42,3 @@ const triple = createMultiplier(3);
 
 console.log(double(5)); // 10
 console.log(triple(5)); // 15
-// Day 12 - Synchronous vs Asynchronous JavaScript
-
-console.log("Start");
-
-// Synchronous code
-function syncTask() {
-    console.log("Synchronous task executed");
-}
-
-syncTask();
-
-// Asynchronous code
-setTimeout(() => {
-    console.log("Asynchronous task executed");
-}, 2000);
-
-console.log("End");
