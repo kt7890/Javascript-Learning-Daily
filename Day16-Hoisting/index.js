@@ -1,28 +1,38 @@
-// Day 16 - Hoisting
+// Day 17 - Event Bubbling & Capturing
 
-// 1️⃣ Function hoisting
-sayHello();
+// Bubbling: event goes from child -> parent
+// Capturing: event goes from parent -> child
 
-function sayHello() {
-    console.log("Hello from function!");
-}
-
-// 2️⃣ Variable hoisting with var
-console.log(a); // undefined
-var a = 10;
-console.log(a); // 10
-
-// 3️⃣ let & const are hoisted but in TDZ
-// console.log(b); // ❌ ReferenceError
-let b = 20;
-
-// console.log(c); // ❌ ReferenceError
-const c = 30;
-
-// 4️⃣ Function expression is NOT hoisted
-// greet(); // ❌ TypeError
-const greet = function () {
-    console.log("Hello from function expression");
+const parent = {
+    name: "Parent",
+    handleClick() {
+        console.log("Parent clicked");
+    }
 };
 
-greet();
+const child = {
+    name: "Child",
+    handleClick() {
+        console.log("Child clicked");
+    }
+};
+
+// Simulating bubbling order
+console.log("---- Bubbling ----");
+child.handleClick();
+parent.handleClick();
+
+// Simulating capturing order
+console.log("---- Capturing ----");
+parent.handleClick();
+child.handleClick();
+
+
+// Real DOM explanation (important for interviews)
+/*
+element.addEventListener("click", handler, false);
+→ Bubbling phase (default)
+
+element.addEventListener("click", handler, true);
+→ Capturing phase
+*/
