@@ -11,7 +11,7 @@ Used for explanations, debugging, readability.
 multi-line
 comment */
 
----
+---//ends
 
 📁 `JavaScript-Learning/basics/README.md`
 
