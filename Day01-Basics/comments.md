@@ -10,7 +10,7 @@ Used for explanations, debugging, readability.
 /* this is
 multi-line
 comment */
-
+//
 ---
 
 📁 `JavaScript-Learning/basics/README.md`
