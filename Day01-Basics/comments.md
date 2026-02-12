@@ -2,7 +2,7 @@
 
 `// single line comment`
 `/* multi line comment */`
-
+////
 Used for explanations, debugging, readability.
 
 ```js
